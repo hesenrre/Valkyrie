@@ -1,0 +1,51 @@
+// new Form.Observer('topic_3', 0.25, function(element, value) {new Ajax.Updater('status', '/topics/change_status', {asynchronous:true, evalScripts:true, parameters:value})}, 
+// new Form.EventObserver('topic_3', function(element, value) {new Ajax.Updater('status', '/topics/change_status', {asynchronous:true, evalScripts:true, parameters:value})}, 'blur')
+package org.lainsoft.valkyrie.ajax;
+
+
+/**
+ * Observable TagLibrary .
+ *
+ * @jsp.tag  name="observe_form"
+ *           body-content="JSP"
+ *           description="Observe Form"
+ */
+public class ObserveForm
+    extends GenericAjaxTag{
+    
+    private String frequency;
+    private String update;
+    private String on;
+    
+    public String 
+    getFrequency(){
+        return frequency;
+    }
+
+    public void
+    setFrequency(String frequency){
+        this.frequency = frequency;
+    }
+    
+    public String 
+    getUpdate(){
+        return update;
+    }
+
+    public void
+    setUpdate(String update){
+        this.update = update;
+    }
+    
+    public String 
+    getOn(){
+        return on;
+    }
+
+    public void
+    setOn(String on){
+        this.on = on;
+    }
+    
+    
+}

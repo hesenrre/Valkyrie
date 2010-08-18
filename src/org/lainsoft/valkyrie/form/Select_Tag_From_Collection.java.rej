@@ -1,0 +1,27 @@
+***************
+*** 207,208
+- 	return super.getModifiers() +
+- 	    (isEmpty(disabled) ? "" : "disabled ") +
+--- 207,208 -----
++ 	return (isEmpty(disabled) ? "" : "disabled ") +
++             super.getModifiers()+
+***************
+*** 210
+- 	    (isEmpty(size)     ? "" : "size=\'" + size + "\' ");
+--- 210 -----
++ 	    (isEmpty(size) ? "" : "size=\'" + size + "\' ");
+***************
+*** 254,255
+- 	formattedList = formattedList.substring(formattedList.indexOf("[")+1,
+- 						formattedList.lastIndexOf("]"));
+--- 0 -----
+***************
+*** 258
+- 	    String[] tokens = formattedList.split(",");
+--- 256 -----
++  	    String[] tokens = formattedList.split(",");
+***************
+*** 260
+- 		String[] subtokens = tokens[i].trim().split("=>");
+--- 258 -----
++  		String[] subtokens = tokens[i].trim().split("=>");

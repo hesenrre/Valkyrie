@@ -1,0 +1,2819 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN" "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+<taglib>
+
+   <tlib-version>1.0</tlib-version>
+   <jsp-version>1.2</jsp-version>
+   <short-name>valkyrie</short-name>
+
+   <tag>
+
+      <name>text_field_with_auto_complete</name>
+      <tag-class>org.lainsoft.valkyrie.ajax.Text_field_with_auto_complete</tag-class>
+      <description><![CDATA[Text field tag.]]></description>
+
+      <attribute>
+         <name>url</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>disabled</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>size</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>format</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>value</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>object</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>property</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>cssclass</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>id</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>name</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onfocus</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onBlur</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onselect</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onchange</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onclick</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>ondblclick</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmousedown</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseup</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseover</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmousemove</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseout</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeypress</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeydown</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeyup</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+
+   </tag>
+   <tag>
+
+      <name>select_tag_from_collection</name>
+      <tag-class>org.lainsoft.valkyrie.form.Select_Tag_From_Collection</tag-class>
+      <description><![CDATA[Select tag.]]></description>
+
+      <attribute>
+         <name>disabled</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>multiple</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>size</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>collection</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>id</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>name</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onfocus</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onBlur</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onselect</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onchange</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onclick</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>ondblclick</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmousedown</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseup</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseover</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmousemove</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseout</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeypress</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeydown</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeyup</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>cssclass</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+
+   </tag>
+   <tag>
+
+      <name>option_for_select_tag</name>
+      <tag-class>org.lainsoft.valkyrie.form.Option_For_Select_Tag</tag-class>
+      <description><![CDATA[Option tag.]]></description>
+
+      <attribute>
+         <name>disabled</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>label</name>
+         <required>false</required>
+
+      </attribute>
+      <attribute>
+         <name>value</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>size</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>id</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>name</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onfocus</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onBlur</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onselect</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onchange</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onclick</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>ondblclick</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmousedown</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseup</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseover</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmousemove</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseout</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeypress</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeydown</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeyup</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>cssclass</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+
+   </tag>
+   <tag>
+
+      <name>error_messages</name>
+      <tag-class>org.lainsoft.valkyrie.form.ErrorMessages</tag-class>
+      <body-content>empty</body-content>
+
+      <attribute>
+         <name>js_activate</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+
+   </tag>
+   <tag>
+
+      <name>rolefilter</name>
+      <tag-class>org.lainsoft.valkyrie.security.RoleFilter</tag-class>
+      <body-content>JSP</body-content>
+
+      <attribute>
+         <name>allowed</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>role</name>
+         <required>true</required>
+         <rtexprvalue>false</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>user</name>
+         <required>true</required>
+         <rtexprvalue>false</rtexprvalue>
+
+      </attribute>
+
+   </tag>
+   <tag>
+
+      <name>observe_form</name>
+      <tag-class>org.lainsoft.valkyrie.ajax.ObserveForm</tag-class>
+      <body-content>JSP</body-content>
+      <description><![CDATA[Observe Form]]></description>
+
+      <attribute>
+         <name>form</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>frequency</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>update</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>on</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>url</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>id</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>name</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onfocus</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onBlur</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onselect</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onchange</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onclick</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>ondblclick</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmousedown</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseup</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseover</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmousemove</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseout</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeypress</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeydown</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeyup</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>cssclass</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+
+   </tag>
+   <tag>
+
+      <name>submit_to_remote</name>
+      <tag-class>org.lainsoft.valkyrie.ajax.Submit_remote_tag</tag-class>
+      <description><![CDATA[Text field tag.]]></description>
+
+      <attribute>
+         <name>value</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>update</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>success</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>failure</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>complete</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>confirm</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>url</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>id</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>name</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onfocus</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onBlur</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onselect</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onchange</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onclick</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>ondblclick</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmousedown</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseup</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseover</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmousemove</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseout</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeypress</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeydown</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeyup</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>cssclass</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+
+   </tag>
+   <tag>
+
+      <name>image_tag</name>
+      <tag-class>org.lainsoft.valkyrie.form.Image_Tag</tag-class>
+      <description><![CDATA[Image tag.]]></description>
+
+      <attribute>
+         <name>align</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>alt</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>src</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>disabled</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>size</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>value</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>object</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>property</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>cssclass</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>id</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>name</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onfocus</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onBlur</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onselect</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onchange</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onclick</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>ondblclick</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmousedown</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseup</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseover</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmousemove</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseout</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeypress</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeydown</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeyup</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+
+   </tag>
+   <tag>
+
+      <name>form_remote_tag</name>
+      <tag-class>org.lainsoft.valkyrie.ajax.Form_remote_tag</tag-class>
+      <body-content>JSP</body-content>
+      <description><![CDATA[form ajax area tag]]></description>
+
+      <attribute>
+         <name>update</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>success</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>failure</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>complete</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>name</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>method</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>id</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>url</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+
+   </tag>
+   <tag>
+
+      <name>text_area_tag</name>
+      <tag-class>org.lainsoft.valkyrie.form.Text_Area_Tag</tag-class>
+      <body-content>JSP</body-content>
+      <description><![CDATA[Input text area tag]]></description>
+
+      <attribute>
+         <name>value</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>cols</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>rows</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>disabled</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>readonly</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>object</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>property</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>cssclass</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>id</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>name</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onfocus</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onBlur</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onselect</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onchange</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onclick</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>ondblclick</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmousedown</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseup</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseover</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmousemove</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseout</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeypress</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeydown</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeyup</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+
+   </tag>
+   <tag>
+
+      <name>file_tag</name>
+      <tag-class>org.lainsoft.valkyrie.form.File_Tag</tag-class>
+      <description><![CDATA[File tag.]]></description>
+
+      <attribute>
+         <name>accept</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>disabled</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>size</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>object</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>property</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>cssclass</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>id</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>name</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onfocus</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onBlur</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onselect</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onchange</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onclick</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>ondblclick</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmousedown</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseup</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseover</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmousemove</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseout</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeypress</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeydown</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeyup</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+
+   </tag>
+   <tag>
+
+      <name>port</name>
+      <tag-class>org.lainsoft.valkyrie.customize.PortletIncluder</tag-class>
+      <body-content>empty</body-content>
+
+      <attribute>
+         <name>zone</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>fillWithDefaults</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>useStrict</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+
+   </tag>
+   <tag>
+
+      <name>render</name>
+      <tag-class>org.lainsoft.valkyrie.customize.Render</tag-class>
+      <body-content>empty</body-content>
+
+   </tag>
+   <tag>
+
+      <name>content_for_layout</name>
+      <tag-class>org.lainsoft.valkyrie.customize.Content_for_layout</tag-class>
+      <body-content>empty</body-content>
+
+   </tag>
+   <tag>
+
+      <name>error_messages_for</name>
+      <tag-class>org.lainsoft.valkyrie.form.Error_messages_for</tag-class>
+      <body-content>empty</body-content>
+
+      <attribute>
+         <name>object_name</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>object_names</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+
+   </tag>
+   <tag>
+
+      <name>listened_text_field</name>
+      <tag-class>org.lainsoft.valkyrie.ajax.Listened_text_field</tag-class>
+      <body-content>JSP</body-content>
+      <description><![CDATA[Input text tag]]></description>
+
+      <attribute>
+         <name>success</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>failure</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>complete</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>update</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>url</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>disabled</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>size</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>format</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>value</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>object</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>property</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>cssclass</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>id</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>name</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onfocus</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onBlur</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onselect</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onchange</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onclick</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>ondblclick</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmousedown</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseup</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseover</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmousemove</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseout</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeypress</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeydown</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeyup</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+
+   </tag>
+   <tag>
+
+      <name>button_box</name>
+      <tag-class>org.lainsoft.valkyrie.form.Button_Box</tag-class>
+      <description><![CDATA[Button tag.]]></description>
+
+      <attribute>
+         <name>disabled</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>size</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>value</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>checked</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>object</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>property</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>cssclass</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>id</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>name</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onfocus</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onBlur</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onselect</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onchange</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onclick</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>ondblclick</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmousedown</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseup</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseover</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmousemove</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseout</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeypress</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeydown</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeyup</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+
+   </tag>
+   <tag>
+
+      <name>link_to_remote</name>
+      <tag-class>org.lainsoft.valkyrie.ajax.Link_to_remote</tag-class>
+      <body-content>JSP</body-content>
+      <description><![CDATA[Input text area tag]]></description>
+
+      <attribute>
+         <name>update</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>success</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>failure</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>complete</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>id</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>ccsclass</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>title</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>confirm</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>url</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+
+   </tag>
+   <tag>
+
+      <name>page_control</name>
+      <tag-class>org.lainsoft.valkyrie.paginate.PaginateControl</tag-class>
+      <body-content>JSP</body-content>
+
+      <attribute>
+         <name>styleClass</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>id</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>action</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>alias</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>label</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>icon</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+
+   </tag>
+   <tag>
+
+      <name>map-select</name>
+      <tag-class>org.lainsoft.valkyrie.form.GenericMapSelect</tag-class>
+      <body-content>empty</body-content>
+
+      <attribute>
+         <name>options</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>selText</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>selected</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>sortedByContent</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>id</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>name</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onfocus</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onBlur</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onselect</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onchange</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onclick</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>ondblclick</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmousedown</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseup</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseover</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmousemove</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseout</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeypress</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeydown</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeyup</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>cssclass</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+
+   </tag>
+   <tag>
+
+      <name>pages</name>
+      <tag-class>org.lainsoft.valkyrie.paginate.PageNumbers</tag-class>
+      <body-content>JSP</body-content>
+
+      <attribute>
+         <name>styleClass</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>id</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>action</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>alias</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+
+   </tag>
+   <tag>
+
+      <name>password_field_tag</name>
+      <tag-class>org.lainsoft.valkyrie.form.Password_Field_Tag</tag-class>
+      <description><![CDATA[Password field tag.]]></description>
+
+      <attribute>
+         <name>disabled</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>size</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>format</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>value</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>object</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>property</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>cssclass</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>id</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>name</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onfocus</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onBlur</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onselect</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onchange</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onclick</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>ondblclick</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmousedown</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseup</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseover</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmousemove</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseout</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeypress</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeydown</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeyup</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+
+   </tag>
+   <tag>
+
+      <name>sortable_element</name>
+      <tag-class>org.lainsoft.valkyrie.scriptaculous.SortableElement</tag-class>
+      <description><![CDATA[Scriptaculous sortable tag.]]></description>
+
+      <attribute>
+         <name>containers</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>element</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>handle</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>url</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>scroll</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>update</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+
+   </tag>
+   <tag>
+
+      <name>select_tag</name>
+      <tag-class>org.lainsoft.valkyrie.form.Select_Tag</tag-class>
+      <description><![CDATA[Select tag.]]></description>
+
+      <attribute>
+         <name>disabled</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>multiple</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>size</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+
+   </tag>
+   <tag>
+
+      <name>radio_button_tag</name>
+      <tag-class>org.lainsoft.valkyrie.form.Radio_Button_Tag</tag-class>
+      <description><![CDATA[Radio button tag.]]></description>
+
+      <attribute>
+         <name>value</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>disabled</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>checked</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>object</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>property</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>cssclass</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>id</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>name</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onfocus</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onBlur</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onselect</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onchange</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onclick</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>ondblclick</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmousedown</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseup</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseover</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmousemove</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseout</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeypress</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeydown</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeyup</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+
+   </tag>
+   <tag>
+
+      <name>paginate</name>
+      <tag-class>org.lainsoft.valkyrie.paginate.PaginateTag</tag-class>
+      <body-content>JSP</body-content>
+
+      <attribute>
+         <name>pageBlocks</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>collection</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>alias</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>limit</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>live_url</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+
+   </tag>
+   <tag>
+
+      <name>text_field_tag</name>
+      <tag-class>org.lainsoft.valkyrie.form.Text_Field_Tag</tag-class>
+      <description><![CDATA[Text field tag.]]></description>
+
+      <attribute>
+         <name>readonly</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>maxlength</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>disabled</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>size</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>format</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>value</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>object</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>property</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>cssclass</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>id</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>name</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onfocus</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onBlur</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onselect</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onchange</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onclick</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>ondblclick</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmousedown</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseup</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseover</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmousemove</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseout</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeypress</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeydown</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeyup</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+
+   </tag>
+   <tag>
+
+      <name>check_box_tag</name>
+      <tag-class>org.lainsoft.valkyrie.form.Check_Box_Tag</tag-class>
+      <description><![CDATA[CheckBox tag.]]></description>
+
+      <attribute>
+         <name>value</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>disabled</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>checked</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>object</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>property</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>cssclass</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>id</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>name</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onfocus</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onBlur</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onselect</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onchange</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onclick</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>ondblclick</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmousedown</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseup</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseover</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmousemove</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseout</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeypress</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeydown</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeyup</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+
+   </tag>
+   <tag>
+
+      <name>hidden_field_tag</name>
+      <tag-class>org.lainsoft.valkyrie.form.Hidden_Field_Tag</tag-class>
+      <description><![CDATA[Hidden field tag.]]></description>
+
+      <attribute>
+         <name>value</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>object</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>property</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>cssclass</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>style</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>id</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>name</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onfocus</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onBlur</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onselect</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onchange</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onclick</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>ondblclick</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmousedown</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseup</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseover</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmousemove</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onmouseout</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeypress</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeydown</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+      <attribute>
+         <name>onkeyup</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+
+      </attribute>
+
+   </tag>
+
+</taglib>

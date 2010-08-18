@@ -1,0 +1,17 @@
+			D		D	D	D	D	D
+		but	chk	fil	hdn	img	pwd	rad	txt	sel	opt
+
+accept				O							
+align						O					
+alt						O					
+checked			O					O			
+disabled	O	O	O		O	O	O	O	O	O
+label											O
+maxlength								O		
+multiple									O	
+name		R	R	R	R	R	R	R	R	O	
+readonly								O		
+selected										O
+size		O	O	O		O	O	O	O	O	
+src						R					
+value		O	R		O	O	O	R	O		O

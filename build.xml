@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<project name="valkyrie" default="all" basedir=".">
+        
+    <property environment="env"/>     
+    <property name="xml.dir" value="xml"/>
+    <property name="src.dir" value="src"/>
+    <property name="bin.dir" value="bin"/>
+    <property name="doc.dir" value="docs"/>
+    <property name="dist.dir" value="dist"/>
+    <property name="conf.dir" value="config"/>
+    <property name="config.dir" value="gen_config"/>
+    <property name="jars.dir" value="lib"/>
+
+    <taskdef name="webdoclet" classname="xdoclet.modules.web.WebDocletTask">
+      <classpath path="${env.CLASSPATH}">
+          <fileset dir="${jars.dir}">
+             <include name="**/*.jar"/>
+          </fileset>
+      </classpath>
+    </taskdef>
+
+  
+  <!-- *********** CLEAN **************** -->
+  <!-- deletes everything except project dirs -->
+  <target name="clean" >
+    <delete verbose="true" includeemptydirs="true">
+      <fileset dir="${basedir}">
+       <exclude name="${src.dir}/**" />
+       <exclude name="${xml.dir}/**" />
+       <exclude name="${conf.dir}/**" />
+       <exclude name="${jars.dir}/**"/>
+       <exclude name="samples" />
+       <exclude name="build.xml" />
+       <exclude name="README" />
+       <exclude name="COPYING" />
+       <exclude name="Install" />
+       <exclude name="Artistic" />
+       <include name="**/*" />
+      </fileset>
+    </delete>
+  </target>
+
+  <!-- *********** PREPARE CLASSPATH ************* -->
+  <!-- prepares classpath -->
+  <target name="prepare_classpath">
+    <path id="jars.path">
+      <fileset dir="${jars.dir}">
+        <include name="**/*.jar"/>
+      </fileset>
+    </path>
+    <property refid="jars.path" name="classpath"/>
+  </target>
+
+  <!-- *********** GENERATE DOC ************* -->
+  <!-- Generates documentation  -->
+  <target name="docs" depends="prepare_classpath">
+     <mkdir dir="${doc.dir}"/>
+     <javadoc package="true" 
+              destdir="${doc.dir}" 
+              classpath="${classpath}" 
+              private="false" 
+              windowtitle="Valkyrie Project" 
+              version="true">
+        <fileset dir="${src.dir}/org">
+          <exclude name="**/examples/**"/>
+          <include name="**/*.java"/>
+        </fileset>
+     </javadoc>
+  </target>
+
+  <!-- *********** COMPILE ************* -->
+  <!-- compile everything -->
+  <target name="compile" depends="prepare_classpath">
+     <mkdir dir="${bin.dir}" />
+     <javac verbose="false" 
+            debug="on"
+            debuglevel="lines,source"
+            deprecation="on" 
+            destdir="${bin.dir}" 
+            classpath="${env.CLASSPATH}:${classpath}" 
+            srcdir="${src.dir}">
+     </javac>
+     <copy todir="${bin.dir}">
+        <fileset dir="${src.dir}">
+                <include name="**/*.betwixt"/>
+        </fileset>
+     </copy>
+  </target>
+
+
+  <!-- *********** BIN_DIST ************* -->
+  <!-- generate distribution bin jar -->
+  <target name="bin_dist" depends="compile">
+    <mkdir dir="${dist.dir}"/>
+    <jar destfile="${dist.dir}/lainsoft-valkyrie-bin.jar">
+      <fileset dir="${bin.dir}"/>
+    </jar>
+  </target>
+
+  <!-- *********** SRC_DIST ************* -->
+  <!-- generate distribution src jar -->
+  <target name="src_dist">
+    <mkdir dir="${dist.dir}"/>
+    <tar destfile="${dist.dir}/lainsoft-valkyrie-src.tar.bz2"
+         compression="bzip2">     
+      <tarfileset dir="${basedir}"
+              preserveLeadingSlashes="true"
+              prefix="lainsoft_valkyrie">
+        <include name="${src.dir}/**"/>
+        <include name="${conf.dir}/**"/>
+        <include name="README"/>
+        <include name="Artistic"/>
+        <include name="COPYING"/>
+        <include name="Install"/>
+        <include name="build.xml"/>
+      </tarfileset>
+    </tar>
+
+  </target>
+
+  <!-- *********** WEBDESC ************* -->
+  <!-- generate web descriptors -->
+  <target name="webdesc" depends="prepare_classpath">
+    <webdoclet destDir="${config.dir}">
+     <fileset dir="${src.dir}"/>
+    <jsptaglib filename="valkyrie.tld" 
+               destDir="${config.dir}"
+               shortname="valkyrie"/>
+    </webdoclet>
+  </target>
+
+  <target name="all" depends="bin_dist, webdesc,docs">
+  </target>
+
+</project>

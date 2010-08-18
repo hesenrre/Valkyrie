@@ -1,0 +1,9 @@
+artifacts: 
+  collections: commons-collections:commons-collections:jar:3.2.1
+  logging: commons-logging:commons-logging:jar:1.0.4
+  fileupload: commons-fileupload:commons-fileupload:jar:1.2.1
+  xdoclet: xdoclet:xdoclet:jar:1.2.3
+  servlet: servletapi:servlet-api:jar:2.4
+  jsp: jspapi:jsp-api:jar:2.0
+  lainsoftcommons: org.lainsoft:commons:jar:1.0.0
+  lainsoftforge: org.lainsoft:forge:jar:1.0.0

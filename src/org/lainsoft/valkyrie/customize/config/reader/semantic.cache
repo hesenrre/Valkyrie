@@ -1,0 +1,15 @@
+;; Object reader/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "reader/"
+  :tables (list 
+   (semanticdb-table "ZoneConfigurationReader.java"
+    :major-mode 'java-mode
+    :tags '(("org.lainsoft.valkyrie.customize.config.reader" package nil nil [274 328]) ("org.lainsoft.forge.persistance.io.reader.XMLBeanReader" include nil nil [330 392]) ("org.lainsoft.valkyrie.customize.config.data.ZoneConfiguration" include nil nil [393 462]) ("java.beans.IntrospectionException" include nil nil [464 505]) ("java.io.IOException" include nil nil [506 533]) ("java.io.File" include nil nil [534 554]) ("org.xml.sax.SAXException" include nil nil [555 587]) ("ZoneConfigurationReader" type (:typemodifiers ("public") :members (("internalReader" variable (:typemodifiers ("private") :type "XMLBeanReader") (reparse-symbol class_member_declaration) [691 728]) ("filedate" variable (:typemodifiers ("private" "static") :type "long") (reparse-symbol class_member_declaration) [733 766]) ("fileName" variable (:typemodifiers ("private" "static") :type "String") (reparse-symbol class_member_declaration) [771 805]) ("cachedZoneConfig" variable (:typemodifiers ("private" "static") :type "ZoneConfiguration") (reparse-symbol class_member_declaration) [810 860]) ("reader" variable (:typemodifiers ("private" "static") :type "ZoneConfigurationReader") (reparse-symbol class_member_declaration) [865 911]) ("ZoneConfigurationReader" function (:constructor-flag t :typemodifiers ("private")) (reparse-symbol class_member_declaration) [918 1010]) ("getInstance" function (:typemodifiers ("public" "static") :type "ZoneConfigurationReader") (reparse-symbol class_member_declaration) [1109 1276]) ("read" function (:typemodifiers ("public") :arguments (("filename" variable (:type "String") (reparse-symbol formal_parameters) [1511 1526])) :type "ZoneConfiguration") (reparse-symbol class_member_declaration) [1477 2002]) ("internalRead" function (:typemodifiers ("private") :arguments (("filename" variable (:type "String") (reparse-symbol formal_parameters) [2055 2070])) :type "ZoneConfiguration") (reparse-symbol class_member_declaration) [2012 2685])) :type "class") nil [644 2687]))
+    :file "ZoneConfigurationReader.java"
+    :pointmax 2688
+    )
+   )
+  :file "semantic.cache"
+  :semantic-tag-version "2.0pre3"
+  :semanticdb-version "2.0pre3"
+  )

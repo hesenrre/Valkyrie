@@ -1,0 +1,203 @@
+/**
+ * PortletIncluder.java is part of Forge Project.
+ *
+ * Copyright 2004,2005 LainSoft Foundation, Demetrio Cruz
+ *
+ * You may distribute under the terms of either the GNU General Public
+ * License or the Artistic License, as specified in the README file.
+ *
+*/
+package org.lainsoft.forge.view.customize;
+
+import org.lainsoft.forge.view.customize.config.data.Portlet;
+import org.lainsoft.forge.view.customize.config.data.Zone;
+import org.lainsoft.forge.view.customize.config.data.ZoneConfiguration;
+import org.lainsoft.forge.view.customize.config.reader.ZoneConfigurationReader;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.jsp.tagext.TagSupport;
+import javax.servlet.jsp.JspWriter;
+import javax.servlet.ServletException;
+
+import org.apache.commons.collections.map.LinkedMap;
+
+/**
+ * TagLib that defines a zone in a jsp, and includes the portlets of the 
+ * defined zone. 
+ *
+ * @jsp.tag    name="port"
+ *             body-content="empty"
+ *             description="Includes portlets for the specified zone".
+ */
+public class PortletIncluder
+    extends TagSupport{
+    
+    private String zone="";
+    private boolean fillWithDefaults=true;
+    private boolean useStrict=false;
+       
+    /**
+     * @jsp.attribute  required="true"
+     *              rtexprvalue="true"
+     */
+    public String
+    getZone (){
+        return zone;
+    }
+    
+    /**
+     * @jsp.attribute  required="false"
+     *              rtexprvalue="true"
+     */
+    public boolean
+    getFillWithDefaults (){
+        return fillWithDefaults;
+    }
+    
+    /**
+     * @jsp.attribute  required="false"
+     *              rtexprvalue="true"
+     */
+    public boolean
+    getUseStrict(){
+        return useStrict;
+    }
+    
+    public void
+    setZone (String zone){
+        this.zone=zone;
+    }
+    
+    public void
+    setFillWithDefaults (String fillWithDefaults){
+        this.fillWithDefaults=(new Boolean(fillWithDefaults)).booleanValue();
+    }
+    
+    public void
+    setFillWithDefaults (boolean fillWithDefaults){
+        this.fillWithDefaults=fillWithDefaults;
+    }
+        
+    public void
+    setUseStrict(String useStrict){
+        this.useStrict=(new Boolean(useStrict)).booleanValue();
+    }
+
+    public void
+    setUseStrict(boolean useStrict){
+        this.useStrict=useStrict;
+    }
+
+    public int
+    doStartTag (){        
+        ZoneConfiguration zoneConfiguration = getZoneConfigurations();
+        if (zoneConfiguration == null){
+            return SKIP_BODY;
+        }
+        List userDefinedPortlets = getFilteredScannedPortlets (zoneConfiguration, scanForPortletsInScopesFor(zone), useStrict);
+        List scannedPortlets = getFilteredScannedPortlets (zoneConfiguration, scanForNonZoneAssignedPortlets(),true);
+        includePortlets (merge(userDefinedPortlets, scannedPortlets, zoneConfiguration));                
+        return SKIP_BODY;
+    }
+    
+    public int
+    doEndTag(){
+        return EVAL_PAGE;
+    }
+
+
+    private void
+    includePortlets(List portlets){        
+        try {
+            for (int i=0; i<portlets.size();i++){
+                pageContext.include (((Portlet)portlets.get(i)).getUri());
+            }
+        }catch (ServletException se){
+            se.printStackTrace();
+        }catch (IOException ioe){
+            ioe.printStackTrace();
+        }
+    }
+
+    private List
+    merge (List userDef, List scannedPort, ZoneConfiguration zoneConfiguration){
+        LinkedMap temp = new LinkedMap();
+        addToMap(temp, userDef);
+        
+        if (fillWithDefaults)
+            addToMap(temp, zoneConfiguration.getPortletsFor(zone));
+        
+        addToMap(temp, scannedPort);        
+        return new ArrayList(temp.values());
+    }
+
+
+    private void
+    addToMap (Map map, List portlets){
+        if (portlets == null)
+            return;
+        
+        for (int i=0; i<portlets.size(); i++){
+            Portlet portlet = (Portlet) portlets.get(i);
+            map.put(portlet.getName(),portlet);
+        }
+    }
+
+
+    private List
+    getFilteredScannedPortlets (ZoneConfiguration zoneConfiguration, String defined, boolean strict){        
+        String [] defPortlets = defined.split("\\W");
+        ArrayList portlets = new ArrayList();
+        for (int i=0; i < defPortlets.length; i++){
+            if (strict ? zoneConfiguration.portletBelongsToZone(zone,defPortlets[i]) : !defPortlets[i].trim().equals("")){
+                Portlet temp;
+                if (!(temp=zoneConfiguration.getPortlet(defPortlets[i])).isEmpty())
+                    portlets.add(temp);
+            }
+        }
+
+        return portlets;
+    }
+    
+
+
+    private String
+    scanForNonZoneAssignedPortlets(){
+        return scanForPortletsInScopesFor("portlets");
+    }
+    
+
+    private String
+    scanForPortletsInScopesFor(String pattern){
+        HttpServletRequest request = (HttpServletRequest)pageContext.getRequest();
+                
+        String portlets = (portlets = (String) request.getAttribute(pattern))==null 
+            ? (portlets = request.getParameter(pattern))==null 
+                ? (portlets = (String) pageContext.getSession().getAttribute(pattern))==null 
+                    ? (portlets = (String) pageContext.getServletContext().getAttribute(pattern))==null 
+                       ? ""
+                       : portlets
+                    : portlets
+                : portlets
+            : portlets;
+        return portlets;
+    }
+        
+
+    private ZoneConfiguration
+    getZoneConfigurations(){
+        String fileName = 
+            (fileName = ((fileName = 
+                          pageContext.getServletContext().getInitParameter("zone_configuration_file"))==null 
+                         ? "./" 
+                         : fileName)).matches("((file)|(http)):/.+")
+            ? fileName
+            : pageContext.getServletContext().getRealPath(fileName);
+        
+        return ZoneConfigurationReader.getInstance().read (fileName);
+    }
+}
